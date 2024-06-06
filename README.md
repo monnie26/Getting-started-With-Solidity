@@ -77,7 +77,7 @@ function mint (address _address, uint _value) public{
     - balances[_address] -= _value;: Decreases the balance of the specified address by the same value.
 
 
-## Authors
+## Author
 
 Monnie Sharma
 
