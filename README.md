@@ -29,13 +29,13 @@ contract MyToken {
 3. Public Variables:
 
 ```solidity
-string public name = "META";
-string public symbol = "MTA";
+string public name = "MONNIE";
+string public symbol = "MNO";
 uint256 public totalSupply = 0;
 
 ```
-- name: A public string variable to store the name of the token, set to "META".
-- symbol: A public string variable to store the abbreviation (symbol) of the token, set to "MTA".
+- name: A public string variable to store the name of the token, set to "MONNIE".
+- symbol: A public string variable to store the abbreviation (symbol) of the token, set to "MNO".
 - totalSupply: A public unsigned integer variable to store the total supply of the token, initialized to 0.
 
 4. Mapping for Balances:
