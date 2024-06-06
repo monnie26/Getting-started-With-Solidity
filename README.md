@@ -41,7 +41,7 @@ uint256 public totalSupply = 0;
 4. Mapping for Balances:
 
 ```solidity
-mapping(address => uint256) public balances;
+mapping(address => uint) public balances;
 
 ```
 - This creates a public mapping that associates each address with its balance of tokens.
@@ -49,34 +49,32 @@ mapping(address => uint256) public balances;
 5. Mint Function:
 
 ```solidity
-function mint(address _to, uint256 _amount) public {
-    totalSupply += _amount;
-    balances[_to] += _amount;
+function mint (address _address, uint _value) public{
+      totalSupply += _value;
+      balances[_address] += _value;
 }
 
 ```
-- mint: A public function that takes two parameters: _to (the address to mint tokens to) and _amount (the amount of tokens to mint).
+- mint: A public function that takes two parameters: _address and _value.
 - Inside the function:
-  * totalSupply += _amount;: Increases the total supply of the token by the specified amount.
-  * balances[_to] += _amount;: Increases the balance of the specified address by the same amount.
+  * totalSupply += _value;: Increases the total supply of the token by the specified value.
+  * balances[_address] += _value;: Increases the balance of the specified address by the same value.
 
 6. Burn Function:
 
 ```solidity
-function burn(address _from, uint256 _amount) public {
-    if (balances[_from] >= _amount) {
-        totalSupply -= _amount;
-        balances[_from] -= _amount;
-    }
-}
+ function burn (address _address, uint _value) public{
+      if(balances[_address] >= _value){
+         totalSupply -= _value;
+         balances[_address] -= _value;
 
 ```
-- burn: A public function that takes two parameters: _from (the address to burn tokens from) and _amount (the amount of tokens to burn).
+- burn: A public function that takes two parameters: _address and _value.
 - Inside the function:
-  * if (balances[_from] >= _amount): Checks if the balance of the specified address is greater than or equal to the amount to be burned.
+  * if (balances[_address] >= _value): Checks if the balance of the specified address is greater than or equal to the value to be burned.
   * If the condition is true:
-    - totalSupply -= _amount;: Decreases the total supply of the token by the specified amount.
-    - balances[_from] -= _amount;: Decreases the balance of the specified address by the same amount.
+    - totalSupply -= _value;: Decreases the total supply of the token by the specified value.
+    - balances[_address] -= _value;: Decreases the balance of the specified address by the same value.
 
 
 ## Authors
