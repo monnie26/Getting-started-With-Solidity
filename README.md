@@ -31,7 +31,7 @@ contract MyToken {
 ```solidity
 string public name = "MONNIE";
 string public symbol = "MNO";
-uint256 public totalSupply = 0;
+uint public totalSupply = 0;
 
 ```
 - name: A public string variable to store the name of the token, set to "MONNIE".
